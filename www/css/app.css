@@ -113,6 +113,11 @@
   font-feature-settings: 'liga';
 }
 
+
+.centro {
+  text-align: center;
+}
+
 @font-face {
   font-family: 'Framework7 Icons';
   font-style: normal;

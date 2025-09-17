@@ -134,3 +134,16 @@ h1 {
     }
 }
 
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+    /* Ajuste para evitar solapamientos */
+}
+
+.col-50 {
+    width: 50%;
+    padding: 5px;
+    box-sizing: border-box;
+}

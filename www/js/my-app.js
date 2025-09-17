@@ -78,6 +78,10 @@ var app = new Framework7({
       path: '/favoritos/',
       url: 'favoritos.html',
     },
+    {
+      path: '/tiendas/',
+      url: 'tiendas.html',
+    },
   ]
   // ... other parameters
 });
@@ -174,6 +178,11 @@ $$(document).on('page:init', '.page[data-name="favoritos"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
   alert('entrando a favoritos');
+})
+$$(document).on('page:init', '.page[data-name="tiendas"]', function (e) {
+  // Do something here when page with data-name="about" attribute loaded and initialized
+  console.log(e);
+  alert('entrando a tiendas');
 })
 
 

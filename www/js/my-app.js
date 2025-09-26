@@ -82,6 +82,10 @@ var app = new Framework7({
       path: '/tiendas/',
       url: 'tiendas.html',
     },
+    {
+      path: '/agregartarjeta/',
+      url: 'agregartarjeta.html',
+    },
   ]
   // ... other parameters
 });
@@ -183,6 +187,11 @@ $$(document).on('page:init', '.page[data-name="tiendas"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
   alert('entrando a tiendas');
+})
+$$(document).on('page:init', '.page[data-name="agregartarjeta"]', function (e) {
+  // Do something here when page with data-name="about" attribute loaded and initialized
+  console.log(e);
+  alert('entrando a agregartarjeta');
 })
 
 

@@ -90,6 +90,58 @@ var app = new Framework7({
   // ... other parameters
 });
 
+
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const raw = JSON.stringify({
+  "email": "prueba@gmail.com",
+  "clave": "12345"
+});
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("https://StockUp.somee.com/api/Login", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var mainView = app.views.create('.view-main');
 
 // Handle Cordova Device Ready Event

@@ -90,7 +90,6 @@ var app = new Framework7({
   // ... other parameters
 });
 
-
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
@@ -110,13 +109,6 @@ fetch("https://StockUp.somee.com/api/Login", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
-
-  
-
-
-
-
-
 
 
 
@@ -162,88 +154,72 @@ $$(document).on('page:init', '.page[data-name="about"]', function (e) {
 $$(document).on('page:init', '.page[data-name="registro"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a registro');
 })
 $$(document).on('page:init', '.page[data-name="inicio"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a inicio');
 })
 
 $$(document).on('page:init', '.page[data-name="olvidecontrasenia"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a olvidecontrasenia');
 })
 
 $$(document).on('page:init', '.page[data-name="codeseis"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a codeseis');
 })
 
 $$(document).on('page:init', '.page[data-name="nuevacontrasenia"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a nuevacontrasenia');
 })
 
 $$(document).on('page:init', '.page[data-name="codeseisdeuna"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a codeseisdeuna');
 })
 
 $$(document).on('page:init', '.page[data-name="cuenta"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a cuenta');
 })
 
 $$(document).on('page:init', '.page[data-name="negocio"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a negocio');
 })
 $$(document).on('page:init', '.page[data-name="cambiardatosperfil"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a cambiardatosperfil');
 })
 $$(document).on('page:init', '.page[data-name="registrarnegocio"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a registrarnegocio');
 })
 $$(document).on('page:init', '.page[data-name="graciasnegocio"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a graciasnegocio');
 })
 $$(document).on('page:init', '.page[data-name="tarjetas"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a tarjetas');
 })
 $$(document).on('page:init', '.page[data-name="compras"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a compras');
 })
 $$(document).on('page:init', '.page[data-name="favoritos"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a favoritos');
 })
 $$(document).on('page:init', '.page[data-name="tiendas"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a tiendas');
 })
 $$(document).on('page:init', '.page[data-name="agregartarjeta"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('entrando a agregartarjeta');
 })
 
 

@@ -90,49 +90,6 @@ var app = new Framework7({
   // ... other parameters
 });
 
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-
-const raw = JSON.stringify({
-  "email": "prueba@gmail.com",
-  "clave": "12345"
-});
-
-const requestOptions = {
-  method: "POST",
-  headers: myHeaders,
-  body: raw,
-  redirect: "follow"
-};
-
-fetch("https://StockUp.somee.com/api/Login", requestOptions)
-  .then((response) => response.text())
-  .then((result) => console.log(result))
-  .catch((error) => console.error(error));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 var mainView = app.views.create('.view-main');
 
@@ -144,6 +101,22 @@ $$(document).on('deviceready', function () {
 $$(document).on('page:init', function (e) {
   // Do something here when page loaded and initialized
   console.log(e);
+  const requestOptions = {
+    method: "POST",
+
+    redirect: "follow"
+  };
+
+  fetch("https://StockUp.somee.com/api/Login", requestOptions)
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .then(function (result) {
+      console.log(result)
+      console.log("dale")
+      linea = "";
+      datos = JSON.parse(result);
+    })
+    .catch((error) => console.error(error));
 })
 // Option 2. Using live 'page:init' event handlers for each page
 $$(document).on('page:init', '.page[data-name="about"]', function (e) {

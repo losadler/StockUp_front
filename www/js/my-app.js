@@ -101,32 +101,92 @@ $$(document).on('deviceready', function () {
 $$(document).on('page:init', function (e) {
   // Do something here when page loaded and initialized
   console.log(e);
-  const requestOptions = {
-    method: "POST",
-
-    redirect: "follow"
-  };
-
-  fetch("https://StockUp.somee.com/api/Login", requestOptions)
-    .then((response) => response.text())
-    .then((result) => console.log(result))
-    .then(function (result) {
-      console.log(result)
-      console.log("dale")
-      linea = "";
-      datos = JSON.parse(result);
-    })
-    .catch((error) => console.error(error));
 })
 // Option 2. Using live 'page:init' event handlers for each page
 $$(document).on('page:init', '.page[data-name="about"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
-  alert('Hello');
+  alert('Salí de acá');
+})
+
+$$(document).on('page:init', '.page[data-name="index"]', function (e) {
+  $$("#botonlogin").on("click", function (e) {
+
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+      "email": $$(`#emaillog`).val(),
+      "clave": $$(`#passwordlog`).val()
+    });
+
+
+    console.log(raw)
+
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
+    };
+
+    fetch("https://StockUp.somee.com/api/Login", requestOptions)
+      .then((response) => response.text())
+      //   .then((result) => console.log(result))
+      .then(function (result) {
+
+        console.log("usuario")
+        linea = "";
+        datos = JSON.parse(result);
+        console.log(datos.id)
+        console.log(datos.email)
+        console.log(datos.clave)
+
+        mainView.router.navigate("/inicio/")
+
+      })
+      .catch((error) => console.error(error));
+  })
+
 })
 $$(document).on('page:init', '.page[data-name="registro"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
+  $$("#botonregistro").on("click", function (e) {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+      "email": $$(`#emailreg`).val(),
+      "clave": $$(`#passwordreg`).val(),
+      "nombre": $$(`#nombrereg`).val(),
+      "apellido": $$(`#apellidoreg`).val()
+    });
+
+    console.log(raw)
+
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
+    };
+
+    fetch("https://StockUp.somee.com/api/Registro", requestOptions)
+      .then((response) => response.text())
+      // .then((result) => console.log(result))
+      .then(function (result) {
+
+        console.log("usuario creado")
+      
+
+
+        mainView.router.navigate("/inicio/")
+      })
+      .catch((error) => console.error(error));
+  })
 })
 $$(document).on('page:init', '.page[data-name="inicio"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
@@ -194,6 +254,3 @@ $$(document).on('page:init', '.page[data-name="agregartarjeta"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
   console.log(e);
 })
-
-
-

@@ -1,39 +1,36 @@
-<!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
 <div class="page" data-name="cuenta">
     <div class="navbar">
         <div class="navbar-inner sliding">
-            <div class="left">
-                <a href="#" class="link back">
-                    <i class="icon icon-back"></i>
-                    <span class="ios-only">Back</span>
-                </a>
-            </div>
-            <div class="title">About Framework7</div>
+            <div class="title">Cuenta</div>
         </div>
     </div>
     <div class="page-content">
         <div class="card card-outline">
             <div class="card-header">Tu Nombre</div>
-            <div class="card-content card-content-padding">Nombre</div>
+            <div id="nombreCuenta" class="card-content card-content-padding">Tu campo</div>
         </div>
+
         <div class="card card-outline">
             <div class="card-header">Tu Apellido</div>
-            <div class="card-content card-content-padding">Apellido</div>
+            <div id="apellidoCuenta" class="card-content card-content-padding">Tu campo</div>
         </div>
+
         <div class="card card-outline">
-            <div class="card-header">Tu E-mail</div>
-            <div class="card-content card-content-padding">E-mail</div>
+            <div class="card-header">Tu Email</div>
+            <div id="emailCuenta" class="card-content card-content-padding">Tu campo</div>
         </div>
+
         <div class="card card-outline">
             <div class="card-header">Tu contraseña</div>
-            <div class="card-content card-content-padding">Contraseña</div>
+            <div id="claveCuenta" class="card-content card-content-padding">Tu campo</div>
         </div>
+
         <br>
-        <br>
-        <a href='/index/'><button class="button button-fill button-round">Home</button></a>
-        <br>
-        <br>
-        <a href='/cambiardatosperfil/'><button class="button button-fill button-round">Quiero cambiar mis
+        <a href="/inicio/"><button class="button button-fill button-round">Home</button></a>
+        <br><br>
+        <a href="/cambiardatosperfil/"><button class="button button-fill button-round">Quiero cambiar mis
                 datos</button></a>
+        <br><br>
+        <button class="button color-red" id="boton-logout">Cerrar sesión</button>
     </div>
 </div>

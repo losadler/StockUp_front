@@ -2,29 +2,23 @@
 <div class="page" data-name="tiendas">
     <div class="navbar">
         <div class="navbar-inner sliding">
-        <div class="left">
-            <a href="#" class="link back">
-            <i class="icon icon-back"></i>
-            <span class="ios-only">Back</span>
-            </a>
-        </div>
-        <div class="title">About Framework7</div>
+            <div class="left">
+                <a href="#" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                </a>
+            </div>
+            <div class="title">Locales</div>
         </div>
     </div>
+
     <div class="page-content">
-        <div class="card card-outline">
-            <div class="card-header">Tienda 1</div>
-            <div class="card-content card-content-padding">Nombre, direccion,etc.</div>
-        </div>
-        <br>
-        <div class="card card-outline">
-            <div class="card-header">Tienda 2</div>
-            <div class="card-content card-content-padding">Nombre, direccion,etc.</div>
-        </div>
-        <br>
-        <div class="card card-outline">
-            <div class="card-header">Tienda 3</div>
-            <div class="card-content card-content-padding">Nombre, direccion,etc.</div>
+        <!-- Contenedor donde se inyectarán las tarjetas de locales -->
+        <div id="tiendasList" class="block">
+            <!-- mientras carga -->
+            <div id="tiendas-loading" class="block" style="text-align:center; padding: 1rem;">
+                Cargando locales...
+            </div>
         </div>
     </div>
 </div>

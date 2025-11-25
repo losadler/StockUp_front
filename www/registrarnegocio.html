@@ -1,92 +1,121 @@
-<!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
 <div class="page" data-name="registrarnegocio">
     <div class="navbar">
         <div class="navbar-inner sliding">
-        <div class="left">
-            <a href="#" class="link back">
-            <i class="icon icon-back"></i>
-            <span class="ios-only">Back</span>
-            </a>
-        </div>
-        <div class="title">About Framework7</div>
+            <div class="left">
+                <a href="#" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Back</span>
+                </a>
+            </div>
         </div>
     </div>
+
     <div class="page-content">
+        <div class="block-title">Datos del negocio</div>
         <div class="list list-strong-ios list-dividers-ios inset-ios">
             <ul>
                 <li class="item-content item-input">
                     <div class="item-inner">
                         <div class="item-title item-label">Nombre</div>
                         <div class="item-input-wrap">
-                            <input type="text" placeholder="Nombre">
+                            <input id="negocionombre" type="text" placeholder="Nombre">
                             <span class="input-clear-button"></span>
                         </div>
                     </div>
                 </li>
+
                 <li class="item-content item-input">
                     <div class="item-inner">
-                        <div class="item-title item-label input-dropdown-wrap">Categoría</div>
-                        <div class="item-input-wrap input-dropdown-wrap">
-                            <select placeholder="Please choose...">
+                        <div class="item-title item-label">Categoría</div>
+                        <div class="item-input-wrap">
+                            <select id="negociocategoria">
                                 <option value="Comida">Comida</option>
                                 <option value="Tecno">Tecno</option>
                                 <option value="Herramientas">Herramientas</option>
                                 <option value="Cosméticos">Cosméticos</option>
                                 <option value="Bazar">Bazar</option>
-                                <option value="ropa">Ropa</option>
+                                <option value="Ropa">Ropa</option>
                             </select>
                         </div>
                     </div>
                 </li>
+
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">Email Negocio</div>
+                        <div class="item-input-wrap">
+                            <input id="negocioemail" type="email" placeholder="email@negocio.com">
+                            <span class="input-clear-button"></span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">Contraseña</div>
+                        <div class="item-input-wrap">
+                            <input id="negocioclave" type="password" placeholder="Contraseña">
+                            <span class="input-clear-button"></span>
+                        </div>
+                    </div>
+                </li>
+
                 <li class="item-content item-input">
                     <div class="item-inner">
                         <div class="item-title item-label">Dirección</div>
                         <div class="item-input-wrap">
-                            <input type="text" placeholder="Dirección">
+                            <input id="negociodireccion" type="text" placeholder="Dirección">
                             <span class="input-clear-button"></span>
                         </div>
                     </div>
                 </li>
+
                 <li class="item-content item-input">
                     <div class="item-inner">
                         <div class="item-title item-label">Localidad</div>
                         <div class="item-input-wrap">
-                            <input type="text" placeholder="Localidad">
+                            <input id="negociolocalidad" type="text" placeholder="Localidad">
                             <span class="input-clear-button"></span>
                         </div>
                     </div>
                 </li>
+
                 <li class="item-content item-input">
                     <div class="item-inner">
                         <div class="item-title item-label">Provincia</div>
                         <div class="item-input-wrap">
-                            <input type="text" placeholder="Provincia">
+                            <input id="negocioprovincia" type="text" placeholder="Provincia">
                             <span class="input-clear-button"></span>
                         </div>
                     </div>
                 </li>
+
                 <li class="item-content item-input">
                     <div class="item-inner">
                         <div class="item-title item-label">Horarios</div>
                         <div class="item-input-wrap">
-                            <input type="text" placeholder="Horarios">
+                            <input id="negociohorarios" type="text" placeholder="Ej: 9:00 - 18:00">
                             <span class="input-clear-button"></span>
                         </div>
                     </div>
                 </li>
+
                 <li class="item-content item-input">
                     <div class="item-inner">
-                        <div class="item-title item-label">Foto</div>
+                        <div class="item-title item-label">Foto (URL)</div>
                         <div class="item-input-wrap">
-                            <input type="image" placeholder="Foto">
+                            <input id="negociofoto" type="url" placeholder="https://...">
                             <span class="input-clear-button"></span>
                         </div>
                     </div>
                 </li>
+
             </ul>
         </div>
-        <br>
-        <br>
-        <a href='/graciasnegocio/'><button class="button button-fill button-round">Finalizar</button></a>
+
+        <div class="block">
+            <a href='/negocio/'><button class="button button-fill button-round"
+                    id="botonregistronegocio">Finalizar</button></a>
+        </div>
     </div>
 </div>

@@ -1,38 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
 
-    <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
--->
-    <!-- Required meta tags-->
+<head>
     <meta charset="utf-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-    <!-- Color theme for statusbar -->
-    <!-- <meta name="theme-color" content="#2196f3"> -->
     <meta name="color-scheme" content="light dark">
-
-    <!-- Your app title -->
-    <title>My App</title>
-    <!-- Path to Framework7 Library CSS -->
+    <title>Stock Up</title>
     <link rel="stylesheet" href="lib/framework7/framework7-bundle.css">
-    <!-- Path to icons -->
     <link rel="stylesheet" href="css/icons.css">
-    <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -42,13 +22,14 @@
 
         <div class="statusbar"></div>
 
-        <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
-            <div class="navbar">
+
+            <!-- Navbar con id para control -->
+            <div id="app-navbar" class="navbar">
                 <div class="navbar-bg bg-color-blue"></div>
                 <div class="navbar-inner bg-color-blue">
                     <div class="left">
-                        <div class="title"><a href='/index/'>Stock Up</a></div>
+                        <div class="title"><a href='/inicio/'>Stock Up</a></div>
                     </div>
                     <div class="right">
                         <a href='/compras/'><i class="f7-icons">cart_fill</i></a>
@@ -60,18 +41,11 @@
                             </p>
                         </div>
                     </div>
-                    <!-- Statusbar overlay -->
-
-
-
                 </div>
-
-
             </div>
 
-
-            <!-- Right Panel with Cover effect -->
-            <div class="panel panel-right panel-cover panel-init">
+            <!-- Panel derecho con id -->
+            <div id="app-panel" class="panel panel-right panel-cover panel-init">
                 <div class="block">
                     <a href='/cuenta/'><button class="button color-blue panel-close">Mi cuenta</button></a>
                     <br>
@@ -79,14 +53,13 @@
                     <br>
                     <a href='/registrarnegocio/'><button class="button color-blue panel-close">Registrar mi
                             negocio</button></a>
-                    <br>
-                    <br>
+                    <br><br>
                     <a href="#" class="panel-close"><button class="button color-red panel-close">Volver</button></a>
                 </div>
             </div>
 
-            <!--pie-->
-            <div class="toolbar tabbar-icons toolbar-bottom">
+            <!-- Toolbar / tabbar con id -->
+            <div id="app-toolbar" class="toolbar tabbar-icons toolbar-bottom">
                 <div class="toolbar-inner">
                     <a href="/tarjetas/" class="tab-link tab-link-active">
                         <i class="f7-icons">creditcard</i>
@@ -107,17 +80,12 @@
                 </div>
             </div>
 
-
+            <!-- Página index/login -->
             <div data-name="index" class="page">
-                <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
-
-                        <!-- CONTENIDO DEMO -->
-
-
                         <div class="centro">
-                            <h1>¡HOLA!</h1>
+                            <h1>¡BIENVENIDO A STOCKUP!</h1>
                         </div>
                         <div class="list list-strong-ios list-dividers-ios inset-ios">
                             <ul>
@@ -134,7 +102,8 @@
                                     <div class="item-inner">
                                         <div class="item-title item-label">Clave</div>
                                         <div class="item-input-wrap">
-                                            <input type="password" id="passwordlog" placeholder="Introduce tu contraseña">
+                                            <input type="password" id="passwordlog"
+                                                placeholder="Introduce tu contraseña">
                                             <span class="input-clear-button"></span>
                                         </div>
                                     </div>
@@ -144,31 +113,30 @@
                         <a href='/olvidecontrasenia/'><button class="button color-blue">¿Olvidaste tu
                                 contraseña?</button></a>
                         <br>
-                        <button class="button button-fill button-round" id="botonlogin">Iniciar
-                                sesión</button>
-                        <br>
-                        <br>
+                        <button class="button button-fill button-round" id="botonlogin">Iniciar sesión</button>
+                        <br><br>
                         <div class="centro">
                             <p>¿Todavía no tienes una cuenta?</p>
                         </div>
                         <a href='/registro/'><button class="button color-blue">Registrarse</button></a>
                     </div>
-
-
-
-
                 </div>
             </div>
 
-
-
-
         </div>
+    </div>
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>
-        <!--<script type="text/javascript" src="lib/framework7/framework7.js"></script>-->
-        <script type="text/javascript" src="js/my-app.js"></script>
+    <!-- Scripts -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>
+
+    <!-- Este es el único archivo JS que necesitamos ahora: -->
+    <script type="text/javascript" src="js/my-app.js"></script>
+
+
+
+
+
 </body>
 
 </html>
